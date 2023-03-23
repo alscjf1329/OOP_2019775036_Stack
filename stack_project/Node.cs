@@ -1,6 +1,6 @@
 namespace LinkedList
 {
-    class Node
+    public class Node
     {
         public object data;
         public Node next;

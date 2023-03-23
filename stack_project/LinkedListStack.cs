@@ -2,11 +2,11 @@ using Node = LinkedList.Node;
 using SingleLinkedList = LinkedList.SingleLinkedList;
 namespace Stack
 {
-    class LinkedListStack{
+    public class LinkedListStack{
         private SingleLinkedList linkedList;
         private int length;
         private Node top;
-        LinkedListStack(){
+        public LinkedListStack(){
             linkedList = new SingleLinkedList();
             length=0;
         }

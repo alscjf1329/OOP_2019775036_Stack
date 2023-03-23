@@ -6,7 +6,7 @@ namespace LinkedList
     {
 
         private Node head;
-        public SingleLinkedList() { }
+        public SingleLinkedList() {}
         public void add(Node node)
         {
             Node temp = head;
