@@ -1,24 +1,29 @@
-using Node=LinkedList.Node;
-public class SingleLinkedList
+using Node = LinkedList.Node;
+
+namespace LinkedList
 {
-    
-    private Node head;
-    public SingleLinkedList(){}
-    public void add(Node node)
+    public class SingleLinkedList
     {
-        Node temp = head;
-        head = node;
-        head.next = temp;
-        temp = null;
+
+        private Node head;
+        public SingleLinkedList() { }
+        public void add(Node node)
+        {
+            Node temp = head;
+            head = node;
+            head.next = temp;
+            temp = null;
+        }
+        public Node remove()
+        {
+            Node temp = head;
+            head = head.next;
+            return temp;
+        }
+        public bool isEmpty()
+        {
+            if(head == null) return true;
+            return false;
+        }
     }
-    public object remove()
-    {
-        Node temp = head;
-        head = head.next;
-        object data = temp.data;
-        temp = null;
-        return data;
-    }
-    
-    
 }
