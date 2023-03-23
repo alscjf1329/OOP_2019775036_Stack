@@ -1,11 +1,11 @@
-﻿using StackByArray = vs.StackByArray;
+﻿using StackByArray = Stack.StackByArray;
 
 
 public partial class Program
 {
     static void Main(string[] args)
     {
-        //배열로 만든 Stack
+        //Array로 만든 Stack
         StackByArray stack = new StackByArray();
         //push
         stack.push(1);
@@ -17,6 +17,8 @@ public partial class Program
         //pop
         int num=1;
         while(!stack.isEmpty()) Console.WriteLine("${0}번째 pop: ${1}",num++,stack.pop());
+        
+        //LinkedList로 만든 Stack
         
     }
 }

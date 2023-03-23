@@ -1,5 +1,5 @@
 ﻿using System;
-namespace vs
+namespace Stack
 {
 	public class StackByArray
 	{
@@ -10,7 +10,6 @@ namespace vs
 		public StackByArray()
 		{
 			stackArray = new object[10];
-			top = null;
 			length = 0;
 		}
 		public void push(object input)
