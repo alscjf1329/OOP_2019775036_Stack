@@ -1,7 +1,6 @@
-﻿using System;
-namespace Stack
+﻿namespace Stack
 {
-	public class ArrayStack
+	public class ArrayStack : StackStruct
 	{
 		private object top;
 		private int length;

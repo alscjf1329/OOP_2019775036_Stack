@@ -1,8 +1,10 @@
 using Node = LinkedList.Node;
 using SingleLinkedList = LinkedList.SingleLinkedList;
+
 namespace Stack
 {
-    public class LinkedListStack{
+    public class LinkedListStack : StackStruct
+    {
         private SingleLinkedList linkedList;
         private int length;
         private Node top;

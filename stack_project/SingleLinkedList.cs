@@ -1,5 +1,3 @@
-using Node = LinkedList.Node;
-
 namespace LinkedList
 {
     public class SingleLinkedList
