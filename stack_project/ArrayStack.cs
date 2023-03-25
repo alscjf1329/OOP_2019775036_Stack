@@ -1,17 +1,17 @@
 ﻿namespace Stack
 {
-	public class ArrayStack : StackStruct
+	public class ArrayStack<T> : StackStruct<T>
 	{
-		private object top;
+		private T? top;
 		private int length;
-		private object[] stackArray;
+		private T[] stackArray;
 
 		public ArrayStack()
 		{
-			stackArray = new object[10];
+			stackArray = new T[10];
 			length = 0;
 		}
-		public void push(object input)
+		public void push(T input)
 		{
 			if (stackArray.Length < length + 1) Array.Resize(ref stackArray, stackArray.Length * 2);
 			stackArray[length] = input;
@@ -19,28 +19,19 @@
 			length++;
 		}
 
-        public object pop()
-        {
-            return pop(stackArray);
-        }
-
-        public object pop(object[] stackArray)
+        public T? pop()
 		{
 			if (length <= 0)
 			{
-				Console.Write("Stack is empty!!");
-				return null;
+				Console.WriteLine("Stack is empty!!");
+				return default(T);
 			}
-			object output = top;
-			top = (length - 2 >= 0) ? stackArray[length - 2] : null;
-			stackArray[length - 1] = null;
+			T? output = top;
+			top = (length - 2 >= 0) ? stackArray[length - 2] : default(T);
+			stackArray[length - 1] = default(T);
 			length--;
 			return output;
         }
-		public object getTop()
-		{
-			return top;
-		}
 		public bool isEmpty()
 		{
 			if(length<=0){

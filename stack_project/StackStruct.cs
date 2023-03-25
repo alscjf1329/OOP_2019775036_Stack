@@ -1,9 +1,9 @@
 namespace Stack
 {
-    public interface StackStruct
+    public interface StackStruct<T>
     {
-        public void push(object data);
-        public object pop();
+        public void push(T data);
+        public T? pop();
         public bool isEmpty();
     }   
 }

@@ -1,20 +1,20 @@
 namespace LinkedList
 {
-    public class SingleLinkedList
+    public class SingleLinkedList<T>
     {
-
-        private Node head;
+        private Node<T>? head;
         public SingleLinkedList() {}
-        public void add(Node node)
+        public void add(Node<T> node)
         {
-            Node temp = head;
+            Node<T>? temp = head;
             head = node;
             head.next = temp;
             temp = null;
         }
-        public Node remove()
+        public Node<T>? remove()
         {
-            Node temp = head;
+            if(head == null) return null;
+            Node<T>? temp = head;
             head = head.next;
             return temp;
         }

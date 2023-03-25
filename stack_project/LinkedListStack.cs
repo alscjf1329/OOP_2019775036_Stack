@@ -1,28 +1,27 @@
-using Node = LinkedList.Node;
-using SingleLinkedList = LinkedList.SingleLinkedList;
+using LinkedList;
 
 namespace Stack
 {
-    public class LinkedListStack : StackStruct
+    public class LinkedListStack<T> : StackStruct<T>
     {
-        private SingleLinkedList linkedList;
+        private SingleLinkedList<T> linkedList;
         private int length;
-        private Node top;
+        private Node<T>? top;
         public LinkedListStack(){
-            linkedList = new SingleLinkedList();
+            linkedList = new SingleLinkedList<T>();
             length=0;
         }
-        public void push(object data)
+        public void push(T data)
         {
-            top=new Node(data);
+            top=new Node<T>(data);
             linkedList.add(top);
             length++;
         }
-        public object pop()
+        public T? pop()
         {
             if(linkedList.isEmpty()){
-                Console.Write("Stack is empty!!");
-				return null;
+                Console.WriteLine("Stack is empty!!");
+				return default(T);
             } 
             length--;
             return linkedList.remove().data;

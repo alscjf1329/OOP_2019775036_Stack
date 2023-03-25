@@ -1,10 +1,10 @@
 namespace LinkedList
 {
-    public class Node
+    public class Node<T>
     {
-        public object data;
-        public Node next;
-        public Node(object data)
+        public T data;
+        public Node<T>? next;
+        public Node(T data)
         {
             this.data = data;
         }

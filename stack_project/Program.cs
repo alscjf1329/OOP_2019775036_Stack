@@ -1,5 +1,4 @@
-﻿using ArrayStack = Stack.ArrayStack;
-using LinkedListStack = Stack.LinkedListStack;
+﻿using Stack;
 
 public partial class Program
 {
@@ -7,28 +6,29 @@ public partial class Program
     {
         //Array로 만든 Stack
         Console.WriteLine("ArrayStack----------");
-        ArrayStack arrayStack = new ArrayStack();
+        ArrayStack<String> arrayStack = new ArrayStack<String>();
         //push
-        arrayStack.push(1);
-        arrayStack.push("a");
-        arrayStack.push(2);
-        arrayStack.push("b");
-        arrayStack.push(3);
-        arrayStack.push("c");
+        // arrayStack.push("a");
+        // arrayStack.push("b");
+        // arrayStack.push("c");
+        // arrayStack.push("d");
+        // arrayStack.push("e");
+        // arrayStack.push("f");
+        arrayStack.pop();
         //pop
         int num=1;
         while(!arrayStack.isEmpty()) Console.WriteLine("${0}번째 pop: ${1}",num++,arrayStack.pop());
         
         //LinkedList로 만든 Stack
         Console.WriteLine("LinkedListStack----------");
-        LinkedListStack linkedListStack = new LinkedListStack();
+        LinkedListStack<int> linkedListStack = new LinkedListStack<int>();
         //push
         linkedListStack.push(1);
-        linkedListStack.push("a");
         linkedListStack.push(2);
-        linkedListStack.push("b");
         linkedListStack.push(3);
-        linkedListStack.push("c");
+        linkedListStack.push(4);
+        linkedListStack.push(5);
+        linkedListStack.push(6);
         //pop
         num=1;
         while(!linkedListStack.isEmpty()) Console.WriteLine("${0}번째 pop: ${1}",num++,linkedListStack.pop());
