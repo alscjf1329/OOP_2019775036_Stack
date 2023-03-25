@@ -8,13 +8,12 @@ public partial class Program
         Console.WriteLine("ArrayStack----------");
         ArrayStack<String> arrayStack = new ArrayStack<String>();
         //push
-        // arrayStack.push("a");
-        // arrayStack.push("b");
-        // arrayStack.push("c");
-        // arrayStack.push("d");
-        // arrayStack.push("e");
-        // arrayStack.push("f");
-        arrayStack.pop();
+        arrayStack.push("a");
+        arrayStack.push("b");
+        arrayStack.push("c");
+        arrayStack.push("d");
+        arrayStack.push("e");
+        arrayStack.push("f");
         //pop
         int num=1;
         while(!arrayStack.isEmpty()) Console.WriteLine("${0}번째 pop: ${1}",num++,arrayStack.pop());
