@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/yangmincheol/Desktop/school/OOP/OOP_2019775036_Stack/stack_project/stack_project.csproj": {}
+    "/Users/yangmincheol/Desktop/school/OOP/OOP_3-1/stack_project/stack_project.csproj": {}
   },
   "projects": {
-    "/Users/yangmincheol/Desktop/school/OOP/OOP_2019775036_Stack/stack_project/stack_project.csproj": {
+    "/Users/yangmincheol/Desktop/school/OOP/OOP_3-1/stack_project/stack_project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/yangmincheol/Desktop/school/OOP/OOP_2019775036_Stack/stack_project/stack_project.csproj",
+        "projectUniqueName": "/Users/yangmincheol/Desktop/school/OOP/OOP_3-1/stack_project/stack_project.csproj",
         "projectName": "stack_project",
-        "projectPath": "/Users/yangmincheol/Desktop/school/OOP/OOP_2019775036_Stack/stack_project/stack_project.csproj",
+        "projectPath": "/Users/yangmincheol/Desktop/school/OOP/OOP_3-1/stack_project/stack_project.csproj",
         "packagesPath": "/Users/yangmincheol/.nuget/packages/",
-        "outputPath": "/Users/yangmincheol/Desktop/school/OOP/OOP_2019775036_Stack/stack_project/obj/",
+        "outputPath": "/Users/yangmincheol/Desktop/school/OOP/OOP_3-1/stack_project/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/yangmincheol/.nuget/NuGet/NuGet.Config"
