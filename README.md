@@ -1,5 +1,5 @@
-# OOP_2019775036_Stack
-## 설명
+# OOP_3-1
+## stack_project 설명
 "Stack is used with Generics" commit 전후로 object로 받는 스택과 generics로 받는 스택으로 나뉨
 실행이 안될 시 .cs 파일들만 vs project에서 돌려 볼것
 ## Stack 기본 메소드
