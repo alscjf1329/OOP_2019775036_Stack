@@ -11,7 +11,7 @@ namespace TelPhoneApp {
         public static List<Order> getInstance()
         {
             return orderList;
-        } 
+        }
         public static void Add(Order oarr) {
             orderList.Add(oarr);
         }
