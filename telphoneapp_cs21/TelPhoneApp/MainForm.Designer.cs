@@ -25,6 +25,8 @@ namespace TelPhoneApp {
         /// </summary>
         private void InitializeComponent() {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCost = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -43,20 +45,19 @@ namespace TelPhoneApp {
             this.label4 = new System.Windows.Forms.Label();
             this.txtRemove = new System.Windows.Forms.TextBox();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.sum_box = new System.Windows.Forms.TextBox();
             this.namesum_groupbox = new System.Windows.Forms.GroupBox();
             this.namesum_box = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtCost = new System.Windows.Forms.TextBox();
+            this.btnBill = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.namesum_groupbox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -76,6 +77,22 @@ namespace TelPhoneApp {
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "입력을 위한 창";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(31, 101);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 12);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "금액 :";
+            // 
+            // txtCost
+            // 
+            this.txtCost.Location = new System.Drawing.Point(85, 101);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.Size = new System.Drawing.Size(143, 21);
+            this.txtCost.TabIndex = 4;
             // 
             // label5
             // 
@@ -151,12 +168,13 @@ namespace TelPhoneApp {
             // 
             // lbDisplay
             // 
-            this.lbDisplay.Font = new System.Drawing.Font("바탕체", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbDisplay.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbDisplay.FormattingEnabled = true;
+            this.lbDisplay.ItemHeight = 24;
             this.lbDisplay.Location = new System.Drawing.Point(6, 20);
             this.lbDisplay.Name = "lbDisplay";
             this.lbDisplay.ScrollAlwaysVisible = true;
-            this.lbDisplay.Size = new System.Drawing.Size(609, 290);
+            this.lbDisplay.Size = new System.Drawing.Size(609, 268);
             this.lbDisplay.TabIndex = 0;
             // 
             // btnSearch
@@ -240,24 +258,14 @@ namespace TelPhoneApp {
             // 
             // btnPrint
             // 
+            this.btnPrint.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnPrint.Location = new System.Drawing.Point(684, 159);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(107, 330);
+            this.btnPrint.Size = new System.Drawing.Size(107, 160);
             this.btnPrint.TabIndex = 1;
             this.btnPrint.Text = "출력";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TelPhoneApp.Properties.Resources.img_baemin;
-            this.pictureBox1.Location = new System.Drawing.Point(57, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 119);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBox5
             // 
@@ -276,6 +284,7 @@ namespace TelPhoneApp {
             this.sum_box.Name = "sum_box";
             this.sum_box.Size = new System.Drawing.Size(209, 35);
             this.sum_box.TabIndex = 0;
+            this.sum_box.Text = "\\";
             this.sum_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.sum_box.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -287,6 +296,7 @@ namespace TelPhoneApp {
             this.namesum_groupbox.Size = new System.Drawing.Size(221, 80);
             this.namesum_groupbox.TabIndex = 7;
             this.namesum_groupbox.TabStop = false;
+            this.namesum_groupbox.Text = "검색한 매출액";
             // 
             // namesum_box
             // 
@@ -295,29 +305,37 @@ namespace TelPhoneApp {
             this.namesum_box.Name = "namesum_box";
             this.namesum_box.Size = new System.Drawing.Size(209, 35);
             this.namesum_box.TabIndex = 0;
+            this.namesum_box.Text = "\\";
             this.namesum_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label6
+            // btnBill
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 101);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 12);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "금액 :";
+            this.btnBill.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnBill.Location = new System.Drawing.Point(684, 329);
+            this.btnBill.Name = "btnBill";
+            this.btnBill.Size = new System.Drawing.Size(107, 160);
+            this.btnBill.TabIndex = 8;
+            this.btnBill.Text = "배달건 출력";
+            this.btnBill.UseVisualStyleBackColor = true;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
-            // txtCost
+            // pictureBox1
             // 
-            this.txtCost.Location = new System.Drawing.Point(85, 101);
-            this.txtCost.Name = "txtCost";
-            this.txtCost.Size = new System.Drawing.Size(143, 21);
-            this.txtCost.TabIndex = 4;
+            this.pictureBox1.Image = global::TelPhoneApp.Properties.Resources.img_baemin;
+            this.pictureBox1.Location = new System.Drawing.Point(57, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 119);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 587);
+            this.Controls.Add(this.btnBill);
             this.Controls.Add(this.namesum_groupbox);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.pictureBox1);
@@ -327,7 +345,8 @@ namespace TelPhoneApp {
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "배달 대행";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -335,11 +354,11 @@ namespace TelPhoneApp {
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.namesum_groupbox.ResumeLayout(false);
             this.namesum_groupbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -372,6 +391,7 @@ namespace TelPhoneApp {
         private System.Windows.Forms.TextBox namesum_box;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCost;
+        private System.Windows.Forms.Button btnBill;
     }
 }
 

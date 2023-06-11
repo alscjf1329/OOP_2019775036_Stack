@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security;
 using System.Text;
@@ -121,5 +122,36 @@ namespace TelPhoneApp {
         {
 
         }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            DateTime localTime = DateTime.Now;
+            string fileName = localTime.ToString("yyyyMMdd_HHmmss") + ".txt"; // 파일 이름을 현재 시간으로 생성
+
+            // 텍스트 파일 경로
+            string directoryPath = Path.GetDirectoryName(Application.StartupPath);
+            directoryPath = Path.GetDirectoryName(directoryPath);
+            directoryPath = Path.Combine(directoryPath, "bill");
+            string filePath = Path.Combine(directoryPath, fileName);
+
+            string inputText = "";
+            for(int i=0; i<lbDisplay.Items.Count; i++)
+            {
+                inputText += lbDisplay.Items[i].ToString()+"\n";
+            }
+            txtName.Text = inputText;
+            try
+            {
+                // 텍스트 파일 생성 및 텍스트 입력
+                File.WriteAllText(filePath, inputText);
+
+                MessageBox.Show("파일이 저장되었습니다.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("오류가 발생했습니다: " + ex.Message);
+            }
+        }
+
     }
 }
