@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace TelPhoneApp {
     public class Orders {
-        List<Order> oderList = new List<Order>();
+        List<Order> orderList = new List<Order>();
         public void Add(Order oarr) {
-            oderList.Add(oarr);
+            orderList.Add(oarr);
         }
         public void AddRange(Order[] oarr) {
-            oderList.AddRange(oarr);
+            orderList.AddRange(oarr);
         }
         public void Remove(int idx) {
-            oderList.RemoveAt(idx);
+            orderList.RemoveAt(idx);
         }
         public Order this[int idx] {
-            get { return oderList[idx]; }
+            get { return orderList[idx]; }
         }
         public int Count {
-            get { return oderList.Count; }
+            get { return orderList.Count; }
         }
     }
 }

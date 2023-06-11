@@ -12,7 +12,7 @@ namespace TelPhoneApp {
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
-        public int cost { get; set; }
+        public int Cost { get; set; }
 
         public Order(string n = "", string p = "", string a = "",int c=0)
         {
@@ -20,10 +20,10 @@ namespace TelPhoneApp {
             Name = n;
             Phone = p;
             Address = a;
-            cost = c;
+            Cost = c;
         }
         public override string ToString() {
-            return $"{OrderNum} | Name: {Name}, Phone: {Phone}";
+            return $"{OrderNum} | Name: {Name}, Phone: {Phone}, Cost: {Cost} ";
         }
     }
 }

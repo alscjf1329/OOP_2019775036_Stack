@@ -23,22 +23,24 @@ namespace TelPhoneApp {
             for (int i = 0; i < lt.Count; ++i)
             {
                 lbDisplay.Items.Add(lt[i].ToString());
-                namesum = lt[i].cost;
+                namesum = lt[i].Cost;
             }
             for(int i=0; i<oList.Count; ++i)
             {
-                sum += oList[i].cost;
+                sum += oList[i].Cost;
             }
             sum_box.Text = sum.ToString() + "\\";
         }
         private void btnAdd_Click(object sender, EventArgs e) {
-            if (txtName.Text != "" && txtPhone.Text != "") {
-                Order o = new Order(txtName.Text, txtPhone.Text,txtAddress.Text);
+            string temp = label6.Text;
+            if (txtName.Text != "" && txtPhone.Text != "" && txtAddress.Text != "" && int.TryParse(txtCost.Text, out _)) { 
+                Order o = new Order(txtName.Text, txtPhone.Text,txtAddress.Text,int.Parse(txtCost.Text));
                 oList.Add(o);
 
                 txtName.Text = "";
                 txtPhone.Text = "";
                 txtAddress.Text = "";
+                txtCost.Text = "";
                 txtName.Focus();
                 UpdateDisplay(oList);
             }

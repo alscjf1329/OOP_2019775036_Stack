@@ -48,6 +48,8 @@ namespace TelPhoneApp {
             this.sum_box = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCost = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -59,6 +61,8 @@ namespace TelPhoneApp {
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtCost);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.txtPhone);
@@ -66,9 +70,9 @@ namespace TelPhoneApp {
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(215, 34);
+            this.groupBox1.Location = new System.Drawing.Point(217, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(318, 119);
+            this.groupBox1.Size = new System.Drawing.Size(318, 141);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "입력을 위한 창";
@@ -111,7 +115,7 @@ namespace TelPhoneApp {
             // 
             this.btnAdd.Location = new System.Drawing.Point(234, 20);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 75);
+            this.btnAdd.Size = new System.Drawing.Size(75, 102);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "추가";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -180,7 +184,7 @@ namespace TelPhoneApp {
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.txtSearch);
             this.groupBox3.Controls.Add(this.btnSearch);
-            this.groupBox3.Location = new System.Drawing.Point(564, 34);
+            this.groupBox3.Location = new System.Drawing.Point(564, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(221, 58);
             this.groupBox3.TabIndex = 3;
@@ -247,7 +251,7 @@ namespace TelPhoneApp {
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TelPhoneApp.Properties.Resources.img_baemin;
-            this.pictureBox1.Location = new System.Drawing.Point(57, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(57, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(118, 119);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -292,6 +296,22 @@ namespace TelPhoneApp {
             this.textBox1.Size = new System.Drawing.Size(209, 35);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(31, 101);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 12);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "금액 :";
+            // 
+            // txtCost
+            // 
+            this.txtCost.Location = new System.Drawing.Point(85, 101);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.Size = new System.Drawing.Size(143, 21);
+            this.txtCost.TabIndex = 4;
             // 
             // MainForm
             // 
@@ -350,6 +370,8 @@ namespace TelPhoneApp {
         private System.Windows.Forms.TextBox sum_box;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtCost;
     }
 }
 
