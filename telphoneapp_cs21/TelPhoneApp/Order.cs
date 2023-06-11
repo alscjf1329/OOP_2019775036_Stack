@@ -21,7 +21,7 @@ namespace TelPhoneApp {
             Address = address;
         }
         public override string ToString() {
-            return $"OrderNum: {OrderNum}, Name: {Name}, Phone: {Phone}";
+            return $"{OrderNum} | Name: {Name}, Phone: {Phone}";
         }
     }
 }

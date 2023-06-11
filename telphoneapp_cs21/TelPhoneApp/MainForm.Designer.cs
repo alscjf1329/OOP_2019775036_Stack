@@ -43,10 +43,12 @@ namespace TelPhoneApp {
             this.label4 = new System.Windows.Forms.Label();
             this.txtRemove = new System.Windows.Forms.TextBox();
             this.btnPrint = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -58,7 +60,7 @@ namespace TelPhoneApp {
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(51, 34);
+            this.groupBox1.Location = new System.Drawing.Point(215, 34);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(318, 119);
             this.groupBox1.TabIndex = 0;
@@ -111,9 +113,10 @@ namespace TelPhoneApp {
             // 
             // txtName
             // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtName.Location = new System.Drawing.Point(85, 20);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(143, 21);
+            this.txtName.Size = new System.Drawing.Size(143, 20);
             this.txtName.TabIndex = 0;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
@@ -129,27 +132,28 @@ namespace TelPhoneApp {
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lbDisplay);
-            this.groupBox2.Location = new System.Drawing.Point(51, 182);
+            this.groupBox2.Location = new System.Drawing.Point(57, 159);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(381, 330);
+            this.groupBox2.Size = new System.Drawing.Size(621, 330);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "출력을 위한 창";
             // 
             // lbDisplay
             // 
+            this.lbDisplay.Font = new System.Drawing.Font("바탕체", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbDisplay.FormattingEnabled = true;
-            this.lbDisplay.ItemHeight = 12;
             this.lbDisplay.Location = new System.Drawing.Point(6, 20);
             this.lbDisplay.Name = "lbDisplay";
-            this.lbDisplay.Size = new System.Drawing.Size(356, 292);
+            this.lbDisplay.ScrollAlwaysVisible = true;
+            this.lbDisplay.Size = new System.Drawing.Size(609, 290);
             this.lbDisplay.TabIndex = 0;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(73, 76);
+            this.btnSearch.Location = new System.Drawing.Point(168, 20);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(101, 37);
+            this.btnSearch.Size = new System.Drawing.Size(48, 21);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "검색";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -157,9 +161,9 @@ namespace TelPhoneApp {
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(60, 76);
+            this.btnRemove.Location = new System.Drawing.Point(168, 20);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(110, 37);
+            this.btnRemove.Size = new System.Drawing.Size(45, 21);
             this.btnRemove.TabIndex = 1;
             this.btnRemove.Text = "삭제";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -170,28 +174,28 @@ namespace TelPhoneApp {
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.txtSearch);
             this.groupBox3.Controls.Add(this.btnSearch);
-            this.groupBox3.Location = new System.Drawing.Point(395, 34);
+            this.groupBox3.Location = new System.Drawing.Point(564, 34);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(207, 119);
+            this.groupBox3.Size = new System.Drawing.Size(221, 58);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "주문 번호로 검색";
+            this.groupBox3.Text = "이름으로 검색";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 49);
+            this.label3.Location = new System.Drawing.Point(18, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.Size = new System.Drawing.Size(37, 12);
             this.label3.TabIndex = 0;
-            this.label3.Text = "주문 번호 :";
+            this.label3.Text = "이름 :";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(73, 46);
+            this.txtSearch.Location = new System.Drawing.Point(61, 20);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(134, 21);
+            this.txtSearch.Size = new System.Drawing.Size(101, 21);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -200,9 +204,9 @@ namespace TelPhoneApp {
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.txtRemove);
             this.groupBox4.Controls.Add(this.btnRemove);
-            this.groupBox4.Location = new System.Drawing.Point(608, 34);
+            this.groupBox4.Location = new System.Drawing.Point(564, 98);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(200, 119);
+            this.groupBox4.Size = new System.Drawing.Size(221, 55);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "주문 번호로 삭제";
@@ -210,34 +214,47 @@ namespace TelPhoneApp {
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 52);
+            this.label4.Location = new System.Drawing.Point(10, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 12);
+            this.label4.Size = new System.Drawing.Size(65, 12);
             this.label4.TabIndex = 0;
-            this.label4.Text = "전화 :";
+            this.label4.Text = "주문 번호 :";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtRemove
             // 
-            this.txtRemove.Location = new System.Drawing.Point(60, 49);
+            this.txtRemove.Location = new System.Drawing.Point(81, 20);
             this.txtRemove.Name = "txtRemove";
-            this.txtRemove.Size = new System.Drawing.Size(134, 21);
+            this.txtRemove.Size = new System.Drawing.Size(81, 21);
             this.txtRemove.TabIndex = 0;
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(438, 202);
+            this.btnPrint.Location = new System.Drawing.Point(684, 159);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(107, 292);
+            this.btnPrint.Size = new System.Drawing.Size(107, 330);
             this.btnPrint.TabIndex = 1;
             this.btnPrint.Text = "출력";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TelPhoneApp.Properties.Resources.img_baemin;
+            this.pictureBox1.Location = new System.Drawing.Point(57, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 119);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 587);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnPrint);
@@ -252,6 +269,7 @@ namespace TelPhoneApp {
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,7 +287,6 @@ namespace TelPhoneApp {
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label4;
@@ -277,6 +294,8 @@ namespace TelPhoneApp {
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

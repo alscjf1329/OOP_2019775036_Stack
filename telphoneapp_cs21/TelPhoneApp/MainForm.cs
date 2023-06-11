@@ -32,8 +32,8 @@ namespace TelPhoneApp {
             }
         }
         private void btnSearch_Click(object sender, EventArgs e) {
-            string orderNum = txtSearch.Text;
-            if (orderNum == "" || !int.TryParse(orderNum, out _))
+            string name = txtSearch.Text;
+            if (name == "" )
                 return;
 
 
@@ -43,7 +43,7 @@ namespace TelPhoneApp {
             Orders tlist = new Orders();
             for(int i = 0; i < oList.Count; ++i)
             {
-                if (oList[i].OrderNum == int.Parse(orderNum)) tlist.Add(oList[i]);
+                if (oList[i].Name == name) tlist.Add(oList[i]);
             }
                 
             UpdateDisplay(tlist);
@@ -87,6 +87,16 @@ namespace TelPhoneApp {
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
