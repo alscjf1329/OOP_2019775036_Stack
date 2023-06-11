@@ -20,13 +20,13 @@ namespace TelPhoneApp
         {
             InitializeComponent();
         }
-        private void UpdateDisplay(Orders lt)
+        private void UpdateWorkDisplay(Orders os)
         {
             int sum = 0;
-            lbDisplay.Items.Clear();
-            for (int i = 0; i < lt.Count; ++i)
+            workDisplay.Rows.Clear();
+            for (int i = 0; i < os.Count; ++i)
             {
-                lbDisplay.Items.Add(lt[i].ToString());
+                workDisplay.Rows.Add(os[i].OrderNum, os[i].Name, os[i].Phone, os[i].Address,os[i].Cost) ;
             }
             for (int i = 0; i < oList.Count; ++i)
             {
@@ -46,7 +46,7 @@ namespace TelPhoneApp
                 txtAddress.Text = "";
                 txtCost.Text = "";
                 txtName.Focus();
-                UpdateDisplay(oList);
+                UpdateWorkDisplay(oList);
             }
         }
         private void btnSearch_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace TelPhoneApp
                 if (oList[i].Name == name) tlist.Add(oList[i]);
             }
 
-            UpdateDisplay(tlist);
+            UpdateWorkDisplay(tlist);
         }
         private void btnRemove_Click(object sender, EventArgs e)
         {
@@ -84,11 +84,11 @@ namespace TelPhoneApp
                 {
                     oList.Remove(i);
                 }
-            UpdateDisplay(oList);
+            UpdateWorkDisplay(oList);
         }
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            UpdateDisplay(oList);
+            UpdateWorkDisplay(oList);
         }
 
         private void txtPhone_TextChanged(object sender, EventArgs e)
@@ -143,11 +143,10 @@ namespace TelPhoneApp
             string filePath = Path.Combine(directoryPath, fileName);
 
             string inputText = "";
-            for (int i = 0; i < lbDisplay.Items.Count; i++)
+            for (int i = 0; i < workDisplay.Rows.Count; i++)
             {
-                inputText += lbDisplay.Items[i].ToString() + "\n";
+                inputText += workDisplay.Rows[i].ToString() + "\n";
             }
-            txtName.Text = inputText;
             try
             {
                 // 텍스트 파일 생성 및 텍스트 입력

@@ -35,7 +35,7 @@ namespace TelPhoneApp {
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lbDisplay = new System.Windows.Forms.ListBox();
+            this.workDisplay = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -51,8 +51,14 @@ namespace TelPhoneApp {
             this.namesum_box = new System.Windows.Forms.TextBox();
             this.btnBill = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.workDisplay)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -158,7 +164,7 @@ namespace TelPhoneApp {
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.lbDisplay);
+            this.groupBox2.Controls.Add(this.workDisplay);
             this.groupBox2.Location = new System.Drawing.Point(57, 159);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(621, 330);
@@ -166,16 +172,22 @@ namespace TelPhoneApp {
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "출력을 위한 창";
             // 
-            // lbDisplay
+            // workDisplay
             // 
-            this.lbDisplay.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbDisplay.FormattingEnabled = true;
-            this.lbDisplay.ItemHeight = 24;
-            this.lbDisplay.Location = new System.Drawing.Point(6, 20);
-            this.lbDisplay.Name = "lbDisplay";
-            this.lbDisplay.ScrollAlwaysVisible = true;
-            this.lbDisplay.Size = new System.Drawing.Size(609, 268);
-            this.lbDisplay.TabIndex = 0;
+            this.workDisplay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.workDisplay.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.workDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.workDisplay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column5,
+            this.Column3,
+            this.Column4});
+            this.workDisplay.Location = new System.Drawing.Point(15, 20);
+            this.workDisplay.Name = "workDisplay";
+            this.workDisplay.RowTemplate.Height = 23;
+            this.workDisplay.Size = new System.Drawing.Size(600, 300);
+            this.workDisplay.TabIndex = 2;
             // 
             // btnSearch
             // 
@@ -331,6 +343,36 @@ namespace TelPhoneApp {
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "No";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "배달원";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "전화 번호";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "주소";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "금액";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -351,6 +393,7 @@ namespace TelPhoneApp {
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.workDisplay)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -372,7 +415,6 @@ namespace TelPhoneApp {
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListBox lbDisplay;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnRemove;
@@ -393,6 +435,12 @@ namespace TelPhoneApp {
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCost;
         private System.Windows.Forms.Button btnBill;
+        private System.Windows.Forms.DataGridView workDisplay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
 
