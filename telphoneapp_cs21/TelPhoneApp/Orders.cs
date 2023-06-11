@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace TelPhoneApp {
     public static class Orders {
+        //singleton
         private static List<Order> orderList = new List<Order>();
         public static List<Order> getInstance()
         {
