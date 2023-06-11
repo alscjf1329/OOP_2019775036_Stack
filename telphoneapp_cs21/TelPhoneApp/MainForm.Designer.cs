@@ -46,8 +46,8 @@ namespace TelPhoneApp {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.sum_box = new System.Windows.Forms.TextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.namesum_groupbox = new System.Windows.Forms.GroupBox();
+            this.namesum_box = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCost = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
@@ -56,7 +56,7 @@ namespace TelPhoneApp {
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.namesum_groupbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -279,23 +279,23 @@ namespace TelPhoneApp {
             this.sum_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.sum_box.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // groupBox6
+            // namesum_groupbox
             // 
-            this.groupBox6.Controls.Add(this.textBox1);
-            this.groupBox6.Location = new System.Drawing.Point(284, 495);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(221, 80);
-            this.groupBox6.TabIndex = 7;
-            this.groupBox6.TabStop = false;
+            this.namesum_groupbox.Controls.Add(this.namesum_box);
+            this.namesum_groupbox.Location = new System.Drawing.Point(284, 495);
+            this.namesum_groupbox.Name = "namesum_groupbox";
+            this.namesum_groupbox.Size = new System.Drawing.Size(221, 80);
+            this.namesum_groupbox.TabIndex = 7;
+            this.namesum_groupbox.TabStop = false;
             // 
-            // textBox1
+            // namesum_box
             // 
-            this.textBox1.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(6, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 35);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.namesum_box.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.namesum_box.Location = new System.Drawing.Point(6, 20);
+            this.namesum_box.Name = "namesum_box";
+            this.namesum_box.Size = new System.Drawing.Size(209, 35);
+            this.namesum_box.TabIndex = 0;
+            this.namesum_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
@@ -318,7 +318,7 @@ namespace TelPhoneApp {
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 587);
-            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.namesum_groupbox);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
@@ -338,8 +338,8 @@ namespace TelPhoneApp {
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.namesum_groupbox.ResumeLayout(false);
+            this.namesum_groupbox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -368,8 +368,8 @@ namespace TelPhoneApp {
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox sum_box;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox namesum_groupbox;
+        private System.Windows.Forms.TextBox namesum_box;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCost;
     }

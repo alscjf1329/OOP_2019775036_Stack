@@ -18,12 +18,10 @@ namespace TelPhoneApp {
         }
         private void UpdateDisplay(Orders lt) {
             int sum= 0;
-            int namesum = 0;
             lbDisplay.Items.Clear();
             for (int i = 0; i < lt.Count; ++i)
             {
                 lbDisplay.Items.Add(lt[i].ToString());
-                namesum = lt[i].Cost;
             }
             for(int i=0; i<oList.Count; ++i)
             {
@@ -32,7 +30,6 @@ namespace TelPhoneApp {
             sum_box.Text = sum.ToString() + "\\";
         }
         private void btnAdd_Click(object sender, EventArgs e) {
-            string temp = label6.Text;
             if (txtName.Text != "" && txtPhone.Text != "" && txtAddress.Text != "" && int.TryParse(txtCost.Text, out _)) { 
                 Order o = new Order(txtName.Text, txtPhone.Text,txtAddress.Text,int.Parse(txtCost.Text));
                 oList.Add(o);
@@ -49,8 +46,13 @@ namespace TelPhoneApp {
             string name = txtSearch.Text;
             if (name == "" )
                 return;
-
-
+            int nameSum = 0;
+            namesum_groupbox.Text = name+"의 총 매출액";
+            for(int i=0; i<oList.Count; i++)
+            {
+                if(name==oList[i].Name)nameSum += oList[i].Cost;
+            }
+            namesum_box.Text = nameSum.ToString() + "\\";
             txtSearch.Text = "";
             txtSearch.Focus();
 
