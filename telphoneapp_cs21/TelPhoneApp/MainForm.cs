@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,9 +17,19 @@ namespace TelPhoneApp {
             InitializeComponent();
         }
         private void UpdateDisplay(Orders lt) {
+            int sum= 0;
+            int namesum = 0;
             lbDisplay.Items.Clear();
             for (int i = 0; i < lt.Count; ++i)
+            {
                 lbDisplay.Items.Add(lt[i].ToString());
+                namesum = lt[i].cost;
+            }
+            for(int i=0; i<oList.Count; ++i)
+            {
+                sum += oList[i].cost;
+            }
+            sum_box.Text = sum.ToString() + "\\";
         }
         private void btnAdd_Click(object sender, EventArgs e) {
             if (txtName.Text != "" && txtPhone.Text != "") {
@@ -97,6 +109,11 @@ namespace TelPhoneApp {
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

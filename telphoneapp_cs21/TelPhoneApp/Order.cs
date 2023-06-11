@@ -12,13 +12,15 @@ namespace TelPhoneApp {
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
-        
-        public Order(string n = "", string p = "", string address = "")
+        public int cost { get; set; }
+
+        public Order(string n = "", string p = "", string a = "",int c=0)
         {
             OrderNum = ++cnt;
             Name = n;
             Phone = p;
-            Address = address;
+            Address = a;
+            cost = c;
         }
         public override string ToString() {
             return $"{OrderNum} | Name: {Name}, Phone: {Phone}";
