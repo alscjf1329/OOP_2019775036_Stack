@@ -16,12 +16,11 @@ namespace TelPhoneApp
     public partial class MainForm : Form
     {
         private string searchName = "";
-        private Orders oList = new Orders();
         public MainForm()
         {
             InitializeComponent();
         }
-        private void UpdateWorkDisplay(Orders os)
+        private void UpdateWorkDisplay(List<Order> os)
         {
             int sum = 0;
             workDisplay.Rows.Clear();
@@ -29,9 +28,9 @@ namespace TelPhoneApp
             {
                 workDisplay.Rows.Add(os[i].OrderNum, os[i].Name, os[i].Phone, os[i].Address,os[i].Cost) ;
             }
-            for (int i = 0; i < oList.Count; ++i)
+            for (int i = 0; i < Orders.getInstance().Count; ++i)
             {
-                sum += oList[i].Cost;
+                sum += Orders.getInstance()[i].Cost;
             }
             sum_box.Text = sum.ToString() + "\\";
         }
@@ -40,14 +39,14 @@ namespace TelPhoneApp
             if (txtName.Text != "" && txtPhone.Text != "" && txtAddress.Text != "" && int.TryParse(txtCost.Text, out _))
             {
                 Order o = new Order(txtName.Text, txtPhone.Text, txtAddress.Text, int.Parse(txtCost.Text));
-                oList.Add(o);
+                Orders.getInstance().Add(o);
 
                 txtName.Text = "";
                 txtPhone.Text = "";
                 txtAddress.Text = "";
                 txtCost.Text = "";
                 txtName.Focus();
-                UpdateWorkDisplay(oList);
+                UpdateWorkDisplay(Orders.getInstance());
             }
         }
         private void btnSearch_Click(object sender, EventArgs e)
@@ -58,18 +57,18 @@ namespace TelPhoneApp
                 return;
             int nameSum = 0;
             namesum_groupbox.Text = name + "의 총 매출액";
-            for (int i = 0; i < oList.Count; i++)
+            for (int i = 0; i < Orders.getInstance().Count; i++)
             {
-                if (name == oList[i].Name) nameSum += oList[i].Cost;
+                if (name == Orders.getInstance()[i].Name) nameSum += Orders.getInstance()[i].Cost;
             }
             namesum_box.Text = nameSum.ToString() + "\\";
             txtSearch.Text = "";
             txtSearch.Focus();
 
-            Orders tlist = new Orders();
-            for (int i = 0; i < oList.Count; ++i)
+            List<Order> tlist = new List<Order>();
+            for (int i = 0; i < Orders.getInstance().Count; ++i)
             {
-                if (oList[i].Name == name) tlist.Add(oList[i]);
+                if (Orders.getInstance()[i].Name == name) tlist.Add(Orders.getInstance()[i]);
             }
 
             UpdateWorkDisplay(tlist);
@@ -81,16 +80,16 @@ namespace TelPhoneApp
             txtRemove.Text = "";
             txtRemove.Focus();
 
-            for (int i = 0; i < oList.Count; ++i)
-                if (oList[i].OrderNum == int.Parse(on))
+            for (int i = 0; i < Orders.getInstance().Count; ++i)
+                if (Orders.getInstance()[i].OrderNum == int.Parse(on))
                 {
-                    oList.Remove(i);
+                    Orders.getInstance().RemoveAt(i);
                 }
-            UpdateWorkDisplay(oList);
+            UpdateWorkDisplay(Orders.getInstance());
         }
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            UpdateWorkDisplay(oList);
+            UpdateWorkDisplay(Orders.getInstance());
         }
 
         private void txtPhone_TextChanged(object sender, EventArgs e)
@@ -120,7 +119,9 @@ namespace TelPhoneApp
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            BestDeliveryManForm bestDeliveryManForm = new BestDeliveryManForm(Orders.getInstance());
+            bestDeliveryManForm.ShowDialog();
+            
         }
 
         private void label4_Click(object sender, EventArgs e)

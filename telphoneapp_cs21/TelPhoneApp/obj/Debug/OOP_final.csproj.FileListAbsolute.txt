@@ -9,3 +9,4 @@ C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\obj\Debug\OOP_final.csp
 C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\obj\Debug\OOP_final.csproj.CoreCompileInputs.cache
 C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\obj\Debug\TelPhoneApp.exe
 C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\obj\Debug\TelPhoneApp.pdb
+C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\obj\Debug\TelPhoneApp.BestDeliveryManForm.resources

@@ -5,22 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TelPhoneApp {
-    public class Orders {
-        List<Order> orderList = new List<Order>();
-        public void Add(Order oarr) {
+    public static class Orders {
+        private static List<Order> orderList = new List<Order>();
+        public static List<Order> getInstance()
+        {
+            return orderList;
+        } 
+        public static void Add(Order oarr) {
             orderList.Add(oarr);
         }
-        public void AddRange(Order[] oarr) {
+        public static void AddRange(Order[] oarr) {
             orderList.AddRange(oarr);
         }
-        public void Remove(int idx) {
+        public static void Remove(int idx) {
             orderList.RemoveAt(idx);
         }
-        public Order this[int idx] {
-            get { return orderList[idx]; }
-        }
-        public int Count {
+        public static int Count {
             get { return orderList.Count; }
         }
+        
     }
 }
