@@ -1,0 +1,11 @@
+C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\bin\Debug\TelPhoneApp.exe.config
+C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\bin\Debug\TelPhoneApp.exe
+C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\bin\Debug\TelPhoneApp.pdb
+C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\obj\Debug\OOP_final.csproj.AssemblyReference.cache
+C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\obj\Debug\OOP_final.csproj.SuggestedBindingRedirects.cache
+C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\obj\Debug\TelPhoneApp.MainForm.resources
+C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\obj\Debug\TelPhoneApp.Properties.Resources.resources
+C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\obj\Debug\OOP_final.csproj.GenerateResource.cache
+C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\obj\Debug\OOP_final.csproj.CoreCompileInputs.cache
+C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\obj\Debug\TelPhoneApp.exe
+C:\Users\sw\Desktop\OOP_3-1\telphoneapp_cs21\TelPhoneApp\obj\Debug\TelPhoneApp.pdb
