@@ -15,7 +15,8 @@ namespace TelPhoneApp
 {
     public partial class MainForm : Form
     {
-        Orders oList = new Orders();
+        private string searchName = "";
+        private Orders oList = new Orders();
         public MainForm()
         {
             InitializeComponent();
@@ -52,6 +53,7 @@ namespace TelPhoneApp
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string name = txtSearch.Text;
+            searchName = name;
             if (name == "")
                 return;
             int nameSum = 0;
@@ -143,9 +145,9 @@ namespace TelPhoneApp
                 return;
             }
             // 배달원
-            if (txtSearch.Text!="")
+            if (searchName!="")
             {
-                inputText += "===== " + txtSearch.Text + "=====\n\n";
+                inputText += "===== " + searchName + "의 매출 내역 =====\n\n";
             }
             // 텍스트 파일 경로
             if (txtPath.Text == "")
