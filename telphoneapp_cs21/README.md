@@ -1,12 +1,15 @@
 # OOP_final
 ## 원본 파일
 <img src="https://github.com/alscjf1329/OOP_3-1/assets/48661310/065aca0b-2a98-4799-bdfe-80d1e61ed5ef" width="500" height="400"/>
+
 ---
+
 ## 배달 대행 업체 프로그램
 <img src="https://github.com/alscjf1329/OOP_3-1/assets/48661310/12bbbf40-a746-471b-bba2-9b1e91bd47bb" width="500" height="400"/>
+
 ### 추가한 기능
 1. 배달 대행 업체의 로고와 form의 제목등 변경 (디자인 변경)
-2. 배달할 주소 추가
+2.  배달할 주소 추가
 3. 해당 주문에 주문을 추가
 4. 기존에 있던 추가 버튼을 바꾸어 주소와 금액들을 다 같이 넘김
 5. 배달원 이름을 통해 받은 배달 내역들을 검색하게 함
