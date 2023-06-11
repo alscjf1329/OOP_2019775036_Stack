@@ -135,24 +135,49 @@ namespace TelPhoneApp
         {
             DateTime localTime = DateTime.Now;
             string fileName = localTime.ToString("yyyyMMdd_HHmmss") + ".txt"; // 파일 이름을 현재 시간으로 생성
-
-            // 텍스트 파일 경로
-            string directoryPath = Path.GetDirectoryName(Application.StartupPath);
-            directoryPath = Path.GetDirectoryName(directoryPath);
-            directoryPath = Path.Combine(directoryPath, "bill");
-            string filePath = Path.Combine(directoryPath, fileName);
-
+            string filePath = "";
             string inputText = "";
-            for (int i = 0; i < workDisplay.Rows.Count; i++)
+            if (workDisplay.Rows.Count - 1 == 0)
             {
-                inputText += workDisplay.Rows[i].ToString() + "\n";
+                MessageBox.Show("출력할 데이터가 없음!!");
+                return;
             }
+            // 배달원
+            if (txtSearch.Text!="")
+            {
+                inputText += "===== " + txtSearch.Text + "=====\n\n";
+            }
+            // 텍스트 파일 경로
+            if (txtPath.Text == "")
+            {
+                string directoryPath = Path.GetDirectoryName(Application.StartupPath);
+                directoryPath = Path.GetDirectoryName(directoryPath);
+                directoryPath = Path.Combine(directoryPath, "bill");
+                filePath = Path.Combine(directoryPath, fileName);
+            }
+            else
+            {
+                filePath = Path.Combine(txtPath.Text, fileName);
+            }
+
+            for (int i = 0; i < workDisplay.Rows.Count-1; i++)
+            {
+                for (int j = 0; j < workDisplay.Columns.Count; j++)
+                {
+                    inputText += workDisplay.Rows[i].Cells[j].OwningColumn.HeaderText;
+                    inputText += " : ";
+                    inputText += workDisplay.Rows[i].Cells[j].Value;
+                    inputText += "   ";
+                }
+                inputText += "\n";
+            }
+
             try
             {
                 // 텍스트 파일 생성 및 텍스트 입력
                 File.WriteAllText(filePath, inputText);
 
-                MessageBox.Show("파일이 저장되었습니다.");
+                MessageBox.Show(filePath+"\n파일이 저장되었습니다.");
             }
             catch (Exception ex)
             {

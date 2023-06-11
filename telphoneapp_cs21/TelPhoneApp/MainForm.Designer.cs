@@ -56,6 +56,8 @@ namespace TelPhoneApp {
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.txtPath = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workDisplay)).BeginInit();
@@ -64,6 +66,7 @@ namespace TelPhoneApp {
             this.groupBox5.SuspendLayout();
             this.namesum_groupbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -293,7 +296,7 @@ namespace TelPhoneApp {
             // sum_box
             // 
             this.sum_box.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.sum_box.Location = new System.Drawing.Point(6, 20);
+            this.sum_box.Location = new System.Drawing.Point(6, 29);
             this.sum_box.Name = "sum_box";
             this.sum_box.Size = new System.Drawing.Size(209, 35);
             this.sum_box.TabIndex = 0;
@@ -314,7 +317,7 @@ namespace TelPhoneApp {
             // namesum_box
             // 
             this.namesum_box.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.namesum_box.Location = new System.Drawing.Point(6, 20);
+            this.namesum_box.Location = new System.Drawing.Point(6, 29);
             this.namesum_box.Name = "namesum_box";
             this.namesum_box.Size = new System.Drawing.Size(209, 35);
             this.namesum_box.TabIndex = 0;
@@ -373,11 +376,31 @@ namespace TelPhoneApp {
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.txtPath);
+            this.groupBox6.Location = new System.Drawing.Point(522, 495);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(269, 80);
+            this.groupBox6.TabIndex = 8;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "영수증 저장할 위치";
+            // 
+            // txtPath
+            // 
+            this.txtPath.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtPath.Location = new System.Drawing.Point(6, 29);
+            this.txtPath.Name = "txtPath";
+            this.txtPath.Size = new System.Drawing.Size(252, 35);
+            this.txtPath.TabIndex = 0;
+            this.txtPath.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 587);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.btnBill);
             this.Controls.Add(this.namesum_groupbox);
             this.Controls.Add(this.groupBox5);
@@ -403,6 +426,8 @@ namespace TelPhoneApp {
             this.namesum_groupbox.ResumeLayout(false);
             this.namesum_groupbox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -441,6 +466,8 @@ namespace TelPhoneApp {
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox txtPath;
     }
 }
 
