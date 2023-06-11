@@ -11,28 +11,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TelPhoneApp {
-    public partial class MainForm : Form {
+namespace TelPhoneApp
+{
+    public partial class MainForm : Form
+    {
         Orders oList = new Orders();
-        public MainForm() {
+        public MainForm()
+        {
             InitializeComponent();
         }
-        private void UpdateDisplay(Orders lt) {
-            int sum= 0;
+        private void UpdateDisplay(Orders lt)
+        {
+            int sum = 0;
             lbDisplay.Items.Clear();
             for (int i = 0; i < lt.Count; ++i)
             {
                 lbDisplay.Items.Add(lt[i].ToString());
             }
-            for(int i=0; i<oList.Count; ++i)
+            for (int i = 0; i < oList.Count; ++i)
             {
                 sum += oList[i].Cost;
             }
             sum_box.Text = sum.ToString() + "\\";
         }
-        private void btnAdd_Click(object sender, EventArgs e) {
-            if (txtName.Text != "" && txtPhone.Text != "" && txtAddress.Text != "" && int.TryParse(txtCost.Text, out _)) { 
-                Order o = new Order(txtName.Text, txtPhone.Text,txtAddress.Text,int.Parse(txtCost.Text));
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (txtName.Text != "" && txtPhone.Text != "" && txtAddress.Text != "" && int.TryParse(txtCost.Text, out _))
+            {
+                Order o = new Order(txtName.Text, txtPhone.Text, txtAddress.Text, int.Parse(txtCost.Text));
                 oList.Add(o);
 
                 txtName.Text = "";
@@ -43,43 +49,45 @@ namespace TelPhoneApp {
                 UpdateDisplay(oList);
             }
         }
-        private void btnSearch_Click(object sender, EventArgs e) {
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
             string name = txtSearch.Text;
-            if (name == "" )
+            if (name == "")
                 return;
             int nameSum = 0;
-            namesum_groupbox.Text = name+"의 총 매출액";
-            for(int i=0; i<oList.Count; i++)
+            namesum_groupbox.Text = name + "의 총 매출액";
+            for (int i = 0; i < oList.Count; i++)
             {
-                if(name==oList[i].Name)nameSum += oList[i].Cost;
+                if (name == oList[i].Name) nameSum += oList[i].Cost;
             }
             namesum_box.Text = nameSum.ToString() + "\\";
             txtSearch.Text = "";
             txtSearch.Focus();
 
             Orders tlist = new Orders();
-            for(int i = 0; i < oList.Count; ++i)
+            for (int i = 0; i < oList.Count; ++i)
             {
                 if (oList[i].Name == name) tlist.Add(oList[i]);
             }
-                
+
             UpdateDisplay(tlist);
         }
-        private void btnRemove_Click(object sender, EventArgs e) {
-            string phone = txtRemove.Text;
-            if (phone == "")
-                return;
-
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            string on = txtRemove.Text;
+            if (on == "" || !int.TryParse(on, out _)) return;
             txtRemove.Text = "";
             txtRemove.Focus();
-                        
+
             for (int i = 0; i < oList.Count; ++i)
-                if (oList[i].Phone == phone) {
+                if (oList[i].OrderNum == int.Parse(on))
+                {
                     oList.Remove(i);
                 }
             UpdateDisplay(oList);
         }
-        private void btnPrint_Click(object sender, EventArgs e) {
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
             UpdateDisplay(oList);
         }
 
@@ -135,9 +143,9 @@ namespace TelPhoneApp {
             string filePath = Path.Combine(directoryPath, fileName);
 
             string inputText = "";
-            for(int i=0; i<lbDisplay.Items.Count; i++)
+            for (int i = 0; i < lbDisplay.Items.Count; i++)
             {
-                inputText += lbDisplay.Items[i].ToString()+"\n";
+                inputText += lbDisplay.Items[i].ToString() + "\n";
             }
             txtName.Text = inputText;
             try
@@ -153,5 +161,9 @@ namespace TelPhoneApp {
             }
         }
 
+        private void txtRemove_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

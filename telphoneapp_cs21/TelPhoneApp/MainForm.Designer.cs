@@ -255,6 +255,7 @@ namespace TelPhoneApp {
             this.txtRemove.Name = "txtRemove";
             this.txtRemove.Size = new System.Drawing.Size(81, 21);
             this.txtRemove.TabIndex = 0;
+            this.txtRemove.TextChanged += new System.EventHandler(this.txtRemove_TextChanged);
             // 
             // btnPrint
             // 
